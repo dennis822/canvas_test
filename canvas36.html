@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            #canvas {
+                background: #000;
+                /*width:400px;
+                height:400px;*/
+            }
+
+            #canvas1 {
+                background: #000;
+                /*width:400px;
+                height:400px;*/
+            }
+
+            #canvas2 {
+                background: #000;
+                /*width:400px;
+                height:400px;*/
+            }
+        </style>
+    </head> 
+    <body>
+        <canvas id="canvas"></canvas>
+        <canvas id="canvas1"></canvas>
+        <canvas id="canvas2"></canvas>
+        <script>
+            var canvas=document.getElementById("canvas");
+            var context=canvas.getContext("2d");
+            var cx=canvas.width=400;
+            var cy=canvas.height=400;
+            //应尽量用js设置高宽，不要用css
+            var grd=context.createLinearGradient(100,100,100,200);
+            grd.addColorStop(0,'pink');
+            grd.addColorStop(1,'white');
+            context.fillStyle=grd;
+            context.fillRect(100,130,200,200);
+
+            context.beginPath();
+            context.fillStyle='#fff';
+            context.shadowBlur=60;
+            context.shadowColor='#fff';
+            context.fillRect(10,10,100,100);
+            context.strokeStyle='#fff';
+            context.strokeRect(150,10,100,100);
+
+            var canvas1=document.getElementById("canvas1");
+            var context1=canvas1.getContext("2d");
+            var cx1=canvas1.width=400;
+            var cy1=canvas1.height=400;
+
+            var grd1=context1.createLinearGradient(0,0,0,400);
+            grd1.addColorStop(0,'rgb(255,0,0)');
+            grd1.addColorStop(0.2,'rgb(255,165,0)');
+            grd1.addColorStop(0.3,'rgb(255, 255, 0)');
+            grd1.addColorStop(0.5,'rgb(0, 255, 0)');
+            grd1.addColorStop(0.7,'rgb(0, 127, 255)');
+            grd1.addColorStop(0.9,'rgb(0, 0, 255)');
+            grd1.addColorStop(1,'rgb(139, 0, 255)');
+
+            context1.fillStyle=grd;
+            context1.fillRect(0,0,400,400);
+
+            var canvas2=document.getElementById("canvas2");
+            var context2=canvas1.getContext("2d");
+            var cx2=canvas2.width=400;
+            var cy2=canvas2.height=400;
+
+            context2.strokeStyle='White';
+            context2.strokeRect=(5,5,50,25);
+            context2.scale(2,2);
+            context2.strokeRect(5,5,50,25);
+            context2.scale(2,2);
+            context2.strokeRect(5,5,50,25);
+
+
+
+
+            
+
+        </script>
+    </body>
+</html>

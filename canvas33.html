@@ -1,16 +1,15 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <title>Title</title>
         <style>
-            #canvas {
+            #canvas{
                 background: #000;
-                /*width:400px;
-                height:400px;*/
             }
-        </style>
-    </head> 
+        </style> 
+    </head>
     <body>
         <canvas id="canvas"></canvas>
         <script>
@@ -18,14 +17,14 @@
             var context=canvas.getContext("2d");
             var cx=canvas.width=400;
             var cy=canvas.height=400;
-            //应尽量用js设置高宽，不要用css
 
             context.beginPath();
-            context.arc(100,100,50,0,Math.PI*2,true);
+            context.arc(100,100,1,0,Math.PI*2,true);
             context.closePath();
             context.fillStyle='rgb(255,255,255)';
             context.fill();
-
         </script>
     </body>
+
+
 </html>

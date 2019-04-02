@@ -21,10 +21,14 @@
             //应尽量用js设置高宽，不要用css
 
             context.beginPath();
-            context.arc(100,100,50,0,Math.PI*2,true);
-            context.closePath();
-            context.fillStyle='rgb(255,255,255)';
-            context.fill();
+            context.arc(100,100,50,0,Math.PI*2,false);
+            context.strokeStyle="white";
+            context.stroke();
+            //context.closePath();
+            //context.fillStyle='rgb(255,255,255)';
+            //context.fill();
+            //stroke():描边
+            //fill():填充
 
         </script>
     </body>
