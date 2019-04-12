@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Circle</title>
+        <style>
+            #canvas {
+                background: #FFF;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="canvas"></canvas>
+        <script>
+            var canvas=document.getElementById("canvas");
+            var context=canvas.getContext("2d");
+            var cx=canvas.width=1200;
+            var cy=canvas.height=1000;
+
+            context.beginPath();
+            context.arc(600,500,66,0,Math.PI*2,true);
+            context.closePath();
+            context.fillStyle='rgb(255,0,0)';
+            context.fill();
+        </script>
+    </body>
+    
+</html>
